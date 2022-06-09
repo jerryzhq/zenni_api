@@ -1,0 +1,29 @@
+- name: 获取token
+  request:
+    method: post
+    url: https://uat.zenni.cn/magento/rest/default/V1/zenni/customer/login/pass
+    data:
+      prefix: 86
+      telephone: 15003676769
+      password: Aikuia123456
+  validate: None
+
+- name: 获取token
+  request:
+    method: post
+    url: https://uat.zenni.cn/magento/rest/default/V1/zenni/customer/login/pass
+    data:
+      prefix: 86
+      telephone:
+      password: Aikuia123456
+  validate:
+    - eq: [status_code, 400]
+
+
+
+
+
+
+
+
+
